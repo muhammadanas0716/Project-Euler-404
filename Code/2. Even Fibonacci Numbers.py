@@ -16,11 +16,10 @@ for i in range(1, 50):
     if values[-1:] < [4_000_000]:
         values.append(sum(values[-2:]))
 
-summation = []
-for num in values:
-    if num % 2 == 0:
-        summation.append(num)
+summation = [num for num in values if num % 2 == 0]
 print(sum(summation))
+
+summation = [num for num in values]
 
 ### End Code ###
 
