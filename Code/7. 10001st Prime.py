@@ -6,24 +6,24 @@
 
 ### Start Code ###
 def is_prime(n):
-    if n < 2:  # Numbers less than 2 are not prime
+    if n < 2:
         return False
-    for i in range(2, int(n**0.5) + 1):  # Check for factors up to the square root of n
-        if n % i == 0:  # If n is divisible by i, it is not prime
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
             return False
         return True
 
 
-count = 0  # Initialize a counter for prime numbers
-num = 2  # Start with the first prime number
+count = 0
+num = 2
 
-while count < 10001:  # Keep checking until we find the 10001th prime
-    if is_prime(num):  # If num is prime, increment the counter
+while count < 10001:
+    if is_prime(num):
         count += 1
-    if count == 10001:  # If we have found the 10001th prime, print it and break out of the loop
+    if count == 10001:
         print("The 10001th prime number is:", num)
         break
-    num += 1  # Increment the number to check for the next prime
+    num += 1
 ### End Code ###
 
 
